@@ -1,0 +1,214 @@
+Welcome to DrRacket, version 9.0 [cs].
+Language: racket, with debugging; memory limit: 128 MB.
+> (+ 39 (- 27 14))
+52
+> (- 73 (* (- 11 -7) 3))
+19
+> (* 30 (/ 4/5 7))
+3 3/7
+> (- (+ 10 (* 98 76)) (* 5432 1))
+2026
+> (define test '(1 2 3 4))
+> test
+'(1 2 3 4)
+> (length test)
+4
+> (0 test)
+. . application: not a procedure;
+ expected a procedure that can be applied to arguments
+  given: 0
+> (last test)
+4
+> (first test)
+1
+> (pop test)
+. . pop: undefined;
+ cannot reference an identifier before its definition
+> (- (* 4 7) (11 + 6)) 
+. . application: not a procedure;
+ expected a procedure that can be applied to arguments
+  given: 11
+> (- (* 4 7) (+ 11 6))\ 
+11
+. .  : undefined;
+ cannot reference an identifier before its definition
+> (- (* 4 7) (+ 11 6))
+11
+> (+ 6 (* 4 (- 7 11)))
+-10
+> (* 4 (+ 6 (-7 11)))
+. . application: not a procedure;
+ expected a procedure that can be applied to arguments
+  given: -7
+> (* 4 (+ 6 (- 7 11)))
+8
+> (- -1.7 (+ 1.6 (* 1/3 6)))
+-5.3
+> (- (-1.7) (+ 1.6 (* 1/3 6)))
+. . application: not a procedure;
+ expected a procedure that can be applied to arguments
+  given: -1.7
+> (- 6 -4)
+10
+> (- -1.7 (+ 1.6 (* 1/3 6)))
+-5.3
+> (+ 1.6 (- -1.7 (* 1/3 6)))
+-2.1
+> (- -1.7 (+ 1.6 (* 1/3 6)))
+-5.3
+> (- (+ 1.6 (* 1/3 6)) -1.7)
+5.3
+> (+ 1.6 (* 1/3 (- 6 -1.7)))
+4.166666666666666
+> (+ (- (4 * 7) 11) 6)
+. . application: not a procedure;
+ expected a procedure that can be applied to arguments
+  given: 4
+> (+ (- (* 4 7) 11) 6)
+23
+> (+ (* 4 (- 7 11) ) 6)
+-10
+> (- (+ 1.6 (* 1/3 6)) -1.7)
+5.3
+> (+ 1.6 (* 1/3 (- 6 -1.7)))
+4.166666666666666
+> (/ (+ 14 (sqrt (- (sqr -14) (* 4 3 15)))) (* 2 3))
+3
+> (define big-number 1059430001)
+> big-number
+1059430001
+> (define small-number 0.002000015)
+> (define indiana 'hoosiers)
+> indiana
+'hoosiers
+> (define number 1 big-number)
+. define: bad syntax (multiple expressions after identifier) in: (define number 1 big-number)
+> (define number1 big-number)
+> number1
+1059430001
+> (define number2 'big-number)
+> 'big-number
+'big-number
+> (define symbol1 indiana)
+> symbol1
+'hoosiers
+> (define symbol2 'indiana)
+> symbol2
+'indiana
+> big-number
+1059430001
+> small-number
+0.002000015
+> 'big-number
+'big-number
+> indiana
+'hoosiers
+> 'indiana
+'indiana
+> number1
+1059430001
+> number2
+'big-number
+> 'number1
+'number1
+> symbol1
+'hoosiers
+> symbol2
+'indiana
+> 'symbol2
+'symbol2
+> (first '(a (b c) d))
+'a
+> (last '(a (b c) d))
+'d
+> (first (first (rest '(a (b c) d))))
+'b
+> (first (rest (first '(a (b c) d))))
+. . rest: contract violation
+  expected: (and/c list? (not/c empty?))
+  given: 'a
+> (first (rest (first (rest '(a (b c) d)))))
+'c
+> (rest (first (rest '(a (b c) d))))
+'(c)
+> (first (rest (first (rest '(a (b c) d)))))
+'c
+> (first (rest (rest '(a (b c) d))))
+'d
+> (first '(a (b c) d))
+'a
+> (first (first (rest '(a (b c) d))))
+'b
+> (first (rest (first (rest '(a (b c) d)))))
+'c
+> (first (rest (rest '(a (b c) d))))
+'d
+> (first (rest (rest '(5 4 (x) 2 1))))
+'(x)
+> (first (first (rest (rest '(5 4 (x) 2 1)))))
+'x
+> (rest (rest (rest (rest '(1 (2 (3) 4 5) (6 x 8))))))
+. . rest: contract violation
+  expected: (and/c list? (not/c empty?))
+  given: '()
+> (rest (rest '(1 (2 (3) 4 5) (6 x 8))))
+'((6 x 8))
+> (rest (first (rest (rest '(1 (2 (3) 4 5) (6 x 8))))))
+'(x 8)
+> (first (rest (first (rest (rest '(1 (2 (3) 4 5) (6 x 8)))))))
+'x
+> '((c (d e)) (a b) ((f g) h))
+'((c (d e)) (a b) ((f g) h))
+> (define x '((c (d e)) (a b) ((f g) h)))
+> (first (rest x))
+'(a b)
+> (rest (first x))
+'((d e))
+> (rest (rest x))
+'(((f g) h))
+> (define x '((c (d e)) (a b) (f g) h))
+> (first (rest x))
+'(a b)
+> (rest (first x))
+'((d e))
+> (rest (rest x))
+'((f g) h)
+> (define x '(c (d e) (a b) (f g) h))
+> (first (rest x))
+'(d e)
+> (define x '((c (d e)) (a b) (f g) h))
+> (first (rest x))
+'(a b)
+> (define x '(i (c (d e)) (a b) (f g) h))
+> (first (rest x))
+'(c (d e))
+> (define x '((c (d e)) (a b) (f g) h))
+> (define x '((i (c (d e))) (a b) (f g) h))
+> (first (rest x))
+'(a b)
+> (rest (first x))
+'((c (d e)))
+> (rest (rest x))
+'((f g) h)
+> (length '(a b))
+2
+> (length '(c (d e)))
+2
+> (length '((f g) h))
+2
+> (define x '((i c (d e)) (a b) (f g) h))
+> (first (rest x))
+'(a b)
+> (rest (first x))
+'(c (d e))
+> (rest (rest x))
+'((f g) h)
+> (length '(a b))
+2
+> (length '(c (d e)))
+2
+> (length '(5 4 (x) 2 1))
+5
+> (length '(1 (2 (3) 4 5) (6 x 8)))
+3
+> 
