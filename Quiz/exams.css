@@ -1,0 +1,181 @@
+main {
+  font-size: 12pt;
+}
+
+/** 
+#tophead {
+  margin-top: -5px;
+}
+*/
+
+.page-header {
+  font-size: 12px;
+}
+
+/** ----- styles used on Quiz 1 ----- */
+
+.instruction {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.offset-list {
+  margin-top: 10px;
+}
+
+.code-short  { margin-bottom: 100px; }
+.code-medium { margin-bottom: 250px; }
+.code-long   { margin-bottom: 400px; }
+
+.text-short  { margin-bottom: 150px; }
+
+img {
+  padding: 5px;
+  margin: 20px 0;
+}
+
+/** ----- classes to style space at and of the page, for print ----- */
+
+.spacer40  { height:  40px; }
+.spacer60  { height:  60px; }
+.spacer80  { height:  80px; }
+.spacer100 { height: 100px; }
+.spacer120 { height: 120px; }
+.spacer160 { height: 160px; }
+.spacer180 { height: 180px; }
+.spacer200 { height: 200px; }
+.spacer240 { height: 240px; }
+.spacer280 { height: 280px; }
+.spacer320 { height: 320px; }
+
+.nameblock {
+  margin: 100px 0;
+  font-size: 24pt;
+  font-style: bold;
+}
+
+/** ----- styles for all sections ----- */
+
+ol {
+  margin-bottom: 30px;
+}
+
+ol > li::marker {
+  font-weight: bold;
+  font-size: larger;
+}
+
+ul {
+  list-style-type: lower-alpha;
+}
+
+ul.instruction > li {
+  font-style: italic;
+}
+
+.codeblock {
+  margin-left: 30px;
+}
+
+/** ----- styles for Short Answer questions in a list ----- */
+
+li.oneline {
+  margin: 25px 0;
+}
+
+li.shortest {
+  margin-bottom: 75px;
+}
+
+li.short {
+  margin-bottom: 100px;
+}
+
+li.medium {
+  margin-bottom: 150px;
+}
+
+li.long {
+  margin-bottom: 250px;
+}
+
+/** ----- LEFTOVER ---------------------------------------- */
+
+/** ----- styles for Label Items questions ----- */
+
+li.label {
+  margin-bottom: 30px;
+}
+
+pre.label {
+  line-height: 300%;
+}
+
+/** ----- styles for Find Errors questions ----- */
+
+li.error {
+  margin-bottom: 30px;
+}
+
+pre.error {
+  line-height: 200%;
+}
+
+/** ----- styles for Trace Code questions ----- */
+
+li.trace {
+  margin-bottom: 30px;
+}
+
+pre.trace {
+  line-height: 175%;
+}
+
+/** ----- styles for Write Code questions ----- */
+
+div.code-example {
+  width: 300px;
+  border: 1px solid black;
+  margin-bottom: 15px;
+}
+
+table.code-example {
+  border: 1px solid black;
+  margin-bottom: 15px;
+}
+
+table.code-example th,td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+table.code-example th {
+  font-weight: bold;
+}
+
+/** ----- styles for "No Answer" questions, as in coding exams ----- */
+
+li.no-answer {
+  margin-bottom: 30px;
+}
+
+/*
+     FILE ARCHIVED ON 23:38:59 Apr 26, 2025 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:41:59 Jan 28, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.514
+  exclusion.robots: 0.018
+  exclusion.robots.policy: 0.008
+  esindex: 0.009
+  cdx.remote: 6.99
+  LoadShardBlock: 182.426 (3)
+  PetaboxLoader3.datanode: 88.677 (4)
+  PetaboxLoader3.resolve: 85.958 (2)
+  load_resource: 75.55
+*/

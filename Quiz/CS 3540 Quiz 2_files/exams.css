@@ -1,0 +1,139 @@
+main {
+  font-size: 12pt;
+}
+
+#tophead {
+  margin-top: -5px;
+}
+
+.page-header {
+  font-size: 12px;
+}
+
+/** ----- styles used on Quiz 1 ----- */
+
+.instruction {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.offset-list {
+  margin-top: 10px;
+}
+
+.code-short  { margin-bottom: 100px; }
+.code-medium { margin-bottom: 250px; }
+.code-long   { margin-bottom: 400px; }
+
+.text-short  { margin-bottom: 150px; }
+
+img {
+  padding: 5px;
+  margin: 20px 0;
+}
+
+/** ----- classes to style space at and of the page, for print ----- */
+
+.spacer40  { height:  40px; }
+.spacer80  { height:  80px; }
+.spacer120 { height: 120px; }
+.spacer160 { height: 160px; }
+.spacer240 { height: 240px; }
+.spacer320 { height: 320px; }
+
+/** ----- LEFTOVER ---------------------------------------- */
+
+/** ----- styles for all sections ----- */
+
+ul.instruction > li {
+  font-style: italic;
+}
+
+.codeblock {
+  margin-left: 30px;
+}
+
+/** ----- styles for Short Answer questions ----- */
+
+li.short {
+  margin-bottom: 100px;
+}
+
+/** ----- styles for Label Items questions ----- */
+
+li.label {
+  margin-bottom: 30px;
+}
+
+pre.label {
+  line-height: 300%;
+}
+
+/** ----- styles for Find Errors questions ----- */
+
+li.error {
+  margin-bottom: 30px;
+}
+
+pre.error {
+  line-height: 200%;
+}
+
+/** ----- styles for Trace Code questions ----- */
+
+li.trace {
+  margin-bottom: 30px;
+}
+
+pre.trace {
+  line-height: 175%;
+}
+
+/** ----- styles for Write Code questions ----- */
+
+div.code-example {
+  width: 300px;
+  border: 1px solid black;
+  margin-bottom: 15px;
+}
+
+table.code-example {
+  border: 1px solid black;
+  margin-bottom: 15px;
+}
+
+table.code-example th,td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+table.code-example th {
+  font-weight: bold;
+}
+
+/** ----- styles for "No Answer" questions, as in coding exams ----- */
+
+li.no-answer {
+  margin-bottom: 30px;
+}
+
+/*
+     FILE ARCHIVED ON 03:18:37 Apr 08, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:42:27 Jan 28, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.529
+  exclusion.robots: 0.019
+  exclusion.robots.policy: 0.009
+  esindex: 0.01
+  cdx.remote: 41.109
+  LoadShardBlock: 163.141 (3)
+  PetaboxLoader3.datanode: 192.072 (4)
+  PetaboxLoader3.resolve: 465.133 (2)
+  load_resource: 854.601
+*/
