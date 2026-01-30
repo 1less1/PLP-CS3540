@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://www.cs.uni.edu/~wallingf/teaching/cs3540/homework/hw02.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS 3540 Homework 2</title>
+    <link rel="stylesheet" href="./CS 3540 Homework 2_files/reset.css" type="text/css">
+    <link rel="stylesheet" href="./CS 3540 Homework 2_files/main.css" type="text/css">
+    <link rel="stylesheet" href="./CS 3540 Homework 2_files/homework.css" type="text/css">
+  </head>
+  <body>
+    <nav>
+      <a href="https://www.cs.uni.edu/~wallingf/teaching/index.html">Home</a>
+      &gt;
+      <a href="https://www.cs.uni.edu/~wallingf/teaching/cs3540/index.html">CS 3540</a>
+      &gt;
+      Homework 2: Basic Functions in Racket
+    </nav>
+
+    <header class="page-header hover-blue">
+      <h1>
+        <a href="https://www.cs.uni.edu/~wallingf/teaching/cs3540/index.html">CS 3540: Programming Languages and Paradigms</a>
+      </h1>
+    </header>
+
+    <article>
+      <h2 class="tophead">Homework 2<br>Basic Functions in Racket</h2>
+      <h5 class="subhead">Due: Monday, February 2, at 11:59 PM</h5>
+
+      <aside id="table-of-contents">
+        <details open="">
+          <summary>Table of Contents</summary>
+          <nav>
+            <ol>
+              <li><a href="https://www.cs.uni.edu/~wallingf/teaching/cs3540/homework/hw02.html#introduction">Introduction</a></li>
+              <li><a href="https://www.cs.uni.edu/~wallingf/teaching/cs3540/homework/hw02.html#problems">Problems</a></li>
+              <li><a href="https://www.cs.uni.edu/~wallingf/teaching/cs3540/homework/hw02.html#deliverables">Deliverables</a></li>
+            </ol>
+          </nav>
+        </details>
+      </aside>
+      <section id="introduction">
+        <h3>Introduction</h3>
+
+        <p>
+          This assignment gives you a chance to write Racket expressions
+          that will be the body of a function.
+        </p>
+
+        <section id="template-source-file">
+          <h4>Template Source File</h4>
+
+          <p>
+            Download
+            <a href="https://www.cs.uni.edu/~wallingf/teaching/cs3540/homework/support/hw02/homework02.rkt">this template file</a>
+            and use it as the starting point for your submission.  Please
+            name the file <code>homework02.rkt</code>!
+          </p>
+          <p>
+            <code>homework02.rkt</code> includes a <code>require</code>
+            expression at the top.  It imports the <code>rackunit</code>
+            module so that we can define unit tests to check our solutions.
+            <span class="note">+</span>
+            The template file contains several test cases for each problem.
+          </p>
+          <p class="notetext">
+            We saw
+            <a href="https://www.cs.uni.edu/~wallingf/teaching/cs3540/sessions/03-code/rackunit-example.rkt">
+              a Rackunit example
+            </a>
+            in Session 3.
+          </p>
+        </section>
+        <section id="do-not-use">
+          <h4>Do Not Use...</h4>
+
+          <p>
+            You do not need any advanced Racket features to solve these
+            problems, only simple expressions.
+          </p>
+          <ul>
+            <li>
+              <em>Do <b>not</b></em> use a <code>let</code> expression
+              in any function.
+            </li>
+            <li>
+              <em>Do <b>not</b></em> use an internal <code>define</code>
+              in any function.
+            </li>
+          </ul>
+        </section>
+        <section id="helpful">
+          <h4>Helpful Functions</h4>
+
+          <p>
+            You may find these Racket primitives useful on this
+            assignment:
+          </p>
+          <ul>
+            <li>
+              <a href="https://docs.racket-lang.org/reference/generic-numbers.html#%28def._%28%28quote._~23~25kernel%29._sqrt%29%29">
+                <code>sqrt</code>
+              </a>
+            </li>
+            <li>
+              <a href="https://docs.racket-lang.org/reference/generic-numbers.html#%28def._%28%28quote._~23~25kernel%29._expt%29%29">
+                <code>expt</code>
+              </a>
+            </li>
+            <li>
+              <a href="https://docs.racket-lang.org/reference/generic-numbers.html#%28def._%28%28quote._~23~25kernel%29._abs%29%29">
+                <code>abs</code>
+              </a>
+            </li>
+          </ul>
+          <p>
+            You may want to use each for at least one problem.
+          </p>
+          <p>
+            There are two ways you can force a number to evaluate
+            as a floating-point number in Problem 4:
+          </p>
+          <ul>
+            <li>
+              Pass the value to
+              <a href="https://docs.racket-lang.org/reference/number-types.html#%28def._%28%28quote._~23~25kernel%29._exact-~3einexact%29%29">
+                <code>exact-&gt;inexact</code>.
+              </a>
+            </li>
+            <li>
+              Make one of the arguments floating-point.  Dividing
+              the elevation by 500.0 instead of 500 will do the trick.
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section id="problems">
+        <h3>Problems</h3>
+
+        <ol>
+          <li id="01" class="text-item">
+            Write a Racket function named <code>discriminant</code>
+            that takes exactly three integer arguments.  They are the
+            coefficients for a quadratic equation,
+            <em>a</em>x² + <em>b</em>x + <em>c</em>. 
+            <code>discriminant</code> returns the value
+            <em>b</em>² - 4<em>a</em><em>c</em>.  For example:
+<pre class="code">&gt; (discriminant 1 4 4)           ; an equation with one real root
+0
+
+&gt; (discriminant 1 5 6)           ; an equation with two real roots
+1
+</pre>
+            I have provided <code>check-equal?</code> expressions for
+            these two examples in your template file.
+          </li>
+          <li id="02" class="text-item">
+            Write a Racket function named <code>total-grade</code> that
+            takes exactly three integer arguments: a homework average,
+            a quiz average, and a final exam average.  Each argument will
+            be in the range 0 .. 100.  <code>total-grade</code> returns
+            the overall grade for the course, based on
+            <a href="https://www.cs.uni.edu/~wallingf/teaching/cs3540/syllabus.html#evaluation">
+              the weights defined in the syllabus:
+            </a>
+            25%, 45%, and 30%, respectively.  For example:
+<pre class="code">&gt; (total-grade  90  80  90)      ; 0.25*90 + 0.45*80 + 0.3*90
+85.5
+&gt; (total-grade  60  50  40)
+49.5
+&gt; (total-grade 100 100 100)      ; perfect score
+100.0
+</pre>
+            I have provided <code>check-=</code> expressions for these
+            three examples in your template file.
+          </li>
+          <li id="03" class="text-item">
+            <figure class="float-right" style="margin-right: 0;">
+              <img src="./CS 3540 Homework 2_files/concentric-rings.png" alt="concentric rings, which look like a doughnut" width="300">
+            </figure>
+            Suppose we have two concentric circles.  The outer circle has
+            a radius of <em>r<sub>O</sub></em>, and the inner circle has
+            a radius of <em>r<sub>I</sub></em>.  The area of the ring
+            they form is the difference between the
+            <a href="https://www.mathgoodies.com/lessons/vol2/circle_area">
+              areas of the two circles.
+            </a>
+            <br><br>
+            Write a Racket function named <code>ring-area</code> that
+            takes two arguments, <em>inner</em> and <em>outer</em>,
+            both in inches.  The function returns the area of the ring
+            formed by the concentric circles.  For example:
+<pre>&gt; (ring-area 1 2)
+9.42477796076938
+</pre>
+            You may want to write a function to compute the area of a
+            circle and use it to compute ring's area.
+            <br><br>
+            I have provided a <code>check-=</code> expression in your
+            template file for the example above, as well as two more
+            <code>check-=</code> expressions to test your solution further.
+          </li>
+          <li id="04" class="text-item">
+            According to
+            <a href="https://en.wikipedia.org/wiki/Joy_of_Cooking">
+              The Joy of Cooking,
+            </a>
+            when you are cooking candy syrups, you should cook them 1 degree
+            cooler than listed in the recipe for every 500 feet of elevation
+            you are above sea level.  For example, the recipe for Chocolate
+            Carmels calls for a temperature of 244° Fahrenheit.  If you
+            were making your Chocolate Carmels in Denver, the Mile-High
+            City, you would want to cook the syrup at 233.44°.
+            <br><br>
+            Write a Racket function named <code>candy-temperature</code>
+            that takes two arguments, the recipe's temperature in degrees
+            Fahrenheit and the elevation in feet, and returns the temperature
+            to use at that elevation.  For example:
+<pre class="code">&gt; (candy-temperature 244 5280)    ;; Denver, the Mile-High City
+233.44
+
+&gt; (candy-temperature 302 977.69)  ;; the highest point in Cedar Falls
+300.04462                         ;;     is approx. 298m above sea level
+
+&gt; (candy-temperature 302 -1401)   ;; the Dead Sea, 1401 ft below sea level
+304.802
+</pre>
+            I have provided <code>check-=</code> expressions for these three
+            examples in your template file.
+          </li>
+          <li id="05" class="text-item">
+            Generally, the dimensions of engineered components are
+            not exactly the specified value, but rather within a certain
+            tolerance of the specified value.  The tolerance generally
+            depends upon the application and the material being used.
+            For example, a metal piece used in construction that is listed
+            as 5 cm in length might actually be any length within 1 mm of
+            5 cm, that is, between 4.9 cm and 5.1 cm, inclusive.
+            <br><br>
+            Write a Racket function named <code>in-range?</code> that
+            takes three numbers as arguments: two numbers to compare, and
+            a tolerance, <code>epsilon</code>.  <code>in-range?</code>
+            returns true if its first two arguments are within
+            <code>epsilon</code> of one another, and false otherwise.
+            For example:
+<pre class="code">&gt; (in-range? 4.95 5.0 0.1)
+#t
+&gt; (in-range? 4.95 5.0 0.01)    ;; not anymore!
+#f
+&gt; (in-range? 5.0 4.95 0.1)     ;; works both ways
+#t
+&gt; (in-range? 5.0 5.95 0.1)
+#f
+&gt; (in-range? 5.5 5.95 0.5)
+#t
+</pre>
+            I have provided <code>check-true</code> and
+            <code>check-false</code> expressions for all of these
+            examples in your template file.
+          </li>
+        </ol>
+      </section>
+      <section id="deliverables">
+        <h3>Deliverables</h3>
+
+        <p>
+          Use <b>Save Definitions</b> to save the file of function
+          definitions you create using the template you downloaded.
+          It will have the file extension <code>rkt</code>.
+        </p>
+        <p>
+          Be sure to use the specified name for your file!  This enables
+          the auto-grader to find and run your code.
+        </p>
+        <p>
+          By the due time and date, use
+          <a href="https://www.cs.uni.edu/~wallingf/submit/which_course.cgi">
+            the course submission system
+          </a>
+          to submit the following files <b></b>electronically:
+        </p>
+        <ul>
+          <li>
+            <code>homework02.rkt</code>, your file of function definitions
+          </li>
+        </ul>
+        <p>
+          No hard copy is required.
+        </p>
+        <p>
+          Be sure that your submission follows
+          <a href="https://www.cs.uni.edu/~wallingf/teaching/cs3540/homework/requirements.html">the submission requirements</a>.
+        </p>
+      </section>
+    </article>
+
+    <footer class="hover-blue">
+      <div class="footer-text">
+        This work is licensed under a
+        <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+          Creative Commons Attribution-ShareAlike 4.0 International License
+        </a>
+      </div>
+      <br>
+      <div class="footer-text">Page last modified: January 27 2026</div>
+    </footer>
+    <script type="text/javascript" src="./CS 3540 Homework 2_files/footnotes.js.download"></script>
+  
+
+
+</body></html>

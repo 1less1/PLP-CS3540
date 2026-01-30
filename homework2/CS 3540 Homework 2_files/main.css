@@ -1,0 +1,466 @@
+/* --------------------------------------------------------- */
+/*          Google fonts: EB Garamond, Noto Sans             */
+/* --------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* --------------------------------------------------------- */
+/*                   body and common tags                    */
+/* --------------------------------------------------------- */
+
+body {
+  margin: 0 50px 30px 50px;      /* margin: auto; */
+  max-width: 1024px;             /* width: 100%;  */
+
+  /* font-family: Helvetica, Arial, Verdana, sans-serif; */
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+
+  color: #333;
+  line-height: 1.5;
+}
+
+article {
+  margin-bottom: 30px;
+  overflow: auto;
+}
+
+section {
+  margin-bottom: 50px;
+
+  section {
+    margin-bottom: 30px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h2 {
+  margin-top: 1.2em;
+  font-size: 2.0em;
+  font-weight: 500;
+  color: #486E96;
+}
+
+h3 {
+  margin-top: 1em;
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #486E96;
+}
+
+h4, h5 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: #444;
+}
+
+h5 {
+  font-size: 1em;
+  color: #888;
+}
+
+sub, sup { font-size: .65em }
+sub { vertical-align: sub }
+sup { vertical-align: super }
+
+p, table {
+  margin-top: 1em;
+}
+
+ul, ol, dl {
+  margin: 10px 0 10px 35px;
+}
+
+ul {
+  list-style: circle;
+  margin-top: 0;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li.text-item { 
+  margin-top: 15px;  
+}
+
+dt {
+  margin-bottom: 10px;
+}
+
+dd {
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #1E76D4;
+}
+
+a:hover {
+  color: maroon;
+}
+
+.hover-blue a:hover {
+  color: #1E76D4;
+}
+
+abbr {
+  border-bottom: 2px dotted #1E76D4;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+/* style for blockquote is with other distinguished text styles below */
+
+q {
+  font-style: italic;
+  quotes: auto;
+}
+
+q::before {
+  content: open-quote;
+}
+
+q::after {
+  content: close-quote;
+}
+
+details {
+  margin: 10px 0 0 50px;
+}
+
+summary {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* --------------------------------------------------------------- */
+
+pre, code {
+  font-family: monospace;
+  font-size: 85%;
+  color: navy;
+  
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius:3px;
+  padding: 2px;
+}
+
+pre.code {
+  padding: 5px 0 5px 10px;
+  margin-left: 10px;
+}
+
+a > code,
+td > code {
+  background: inherit;
+  color: inherit;
+  border: none;
+  padding: 0;
+}
+
+/* tables */
+
+table {
+  border-left: 1px #ccc solid;
+  border-right: 1px #ccc solid;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+thead {
+  background: #ddd;
+  font-weight: bold;
+  text-align: center;
+}
+
+th, td {
+  padding: 6px;
+  border: 1px solid #999;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+/* --------------------------------------------------------- */
+/*                    table of contents                      */
+/* --------------------------------------------------------- */
+
+aside > details {
+  margin: 10px 0 0 10px;
+}
+
+aside > details > summary {
+  font-style: normal;
+  font-size: larger;
+  margin-bottom: 10px;
+}
+
+aside > details > summary::marker {
+  font-size: smaller;
+}
+
+
+/* --------------------------------------------------------- */
+/*                         body nav                          */
+/* --------------------------------------------------------- */
+
+body > nav {
+  font-family: sans-serif;
+  font-size: smaller;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-left: 2px;
+}
+
+body > nav, body > nav a {
+  color: #999;
+}
+
+body > nav a:hover {
+  color: #1E76D4;
+}
+
+
+/* --------------------------------------------------------- */
+/*                       page header                         */
+/* --------------------------------------------------------- */
+
+.page-header {
+  border-bottom: solid #DDD 5px;
+  overflow: auto;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+
+.page-header h1 {
+  float: left;
+  font-size: 2em;
+}
+
+.page-header h1 a {
+  color: #444;
+}
+
+.page-header h2 {
+  float: right;   
+  color: #666;
+  font-size: 1.5em;
+  margin-top: 6px;
+}
+
+
+/* --------------------------------------------------------- */
+/*                          footer                           */
+/* --------------------------------------------------------- */
+
+footer {
+  border-top: solid #ddd 2px;
+  padding-top: 4px;
+  padding-bottom: 30px;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #aaa;
+}
+   
+.footer-text {
+  float: right;
+  color: #aaa;
+}
+
+/* --------------------------------------------------------- */
+/*           classes for styling multiple elements           */
+/* --------------------------------------------------------- */
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.indent {
+  margin-left: 15px;
+}
+
+.centered-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.inline-img {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*
+ * for adding a border to images that disappear into the page
+ */
+.with-border {
+  border: 1px solid lightgray;
+  padding: 15px;
+}
+
+
+/* --------------------------------------------------------- */
+/*     classes for distinguishing text of various types      */
+/* --------------------------------------------------------- */
+
+/*
+ * traditional block quotes
+ */
+blockquote {
+  margin: 10px 0 10px 30px;
+  color: #777;
+  font-style: italic;
+  border: 1px solid black;
+  border-left: 5px solid black;
+  padding: 1em;
+  padding-left: 2em;
+}
+
+/*
+ * information box: text to set off and emphasize
+ */
+.infobox {
+  margin: 10px 0 10px 30px;
+  background-color: rgb(211, 245, 211);
+  border: 1px solid blue;
+  border-left: 5px solid blue;
+  padding: 1em;
+  padding-left: 2em;
+}
+
+/*
+ * instructions and in-class exercise questions
+ */
+
+.instructions, .exercise-question {
+  margin: 20px 0;
+  background-color: rgb(235, 235, 235);
+  border: 1px solid black;
+  border-left: 5px solid black;
+  padding: 1em;
+  padding-left: 2em;
+}
+
+.instructions h3 {
+  margin-top: 0px;
+}
+
+/*
+ * quick in-class exercises without spoilers
+ */
+
+.hide-answer {
+  margin: 10px 0 10px 30px;
+  color: #444;
+  background-color: rgb(235, 235, 235);
+  border: 1px solid black;
+  border-left: 5px solid black;
+  padding: 1em;
+  padding-left: 2em;
+}
+
+.hide-answer summary {
+  font-style: unset;
+  margin-bottom: 15px;
+}
+
+/*
+ * quotable rules in text that we want to stand out
+ */
+
+.rule {
+  margin: 10px 0 10px 30px;
+  color: black;
+  background-color: lightblue;
+  border: 2px solid gray;
+  border-left: 5px solid gray;
+  padding: 1em;
+  /* padding-left: 2em; */
+
+  text-align: center;
+  width: 500px;
+}
+
+/*
+ * "meta" notes for working through session notes
+ */
+.meta {
+  margin: 10px 0 10px 30px;
+  font-style: italic;
+  color: #777;
+  border-left: 5px red solid;
+  padding: 1em;
+  padding-left: 2em;
+}
+
+
+/* --------------------------------------------------------- */
+/*                  classes for footnotes                    */
+/*           used in conjunction with footnotes.js           */
+/* --------------------------------------------------------- */
+
+.note {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 90%;
+  color: white;
+  background-color: lightgray;
+  border-radius: 4px;
+  padding: 0 3px 1px 3px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+.notetext {
+  font-size: 90%;
+  border: 3px solid lightgray;
+  padding: 10px 20px;
+  margin: 25px 0;
+}
+
+
+/* --------------------------------------------------------- */
+/*                     @media settings                       */
+/* --------------------------------------------------------- */
+
+@media (max-width: 500px) {
+  img.img-resp {
+    margin: 0 0 0 0;
+    float: none;
+  }
+}

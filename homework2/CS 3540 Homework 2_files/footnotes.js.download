@@ -1,0 +1,21 @@
+function openNote(e) {
+  let mark = e.target;
+  let parent = mark.parentNode;
+  let note = parent.nextElementSibling;
+  note.removeAttribute('hidden');
+  mark.onclick = closeNote;
+}
+
+function closeNote(e) {
+  let mark = e.target;
+  let parent = mark.parentNode;
+  let note = parent.nextElementSibling;
+  note.setAttribute('hidden', 'true');
+  mark.onclick = openNote;
+}
+
+let marks = document.body.querySelectorAll('.note');
+marks.forEach(
+  function (element) {
+    element.onclick = openNote;
+  });
